@@ -2,7 +2,7 @@
 compileSdk = "35"
 datastore = "1.2.1"
 kotlinxSerializationJson = "1.10.0"
-minSdk = "26"
+minSdk = "25"
 targetSdk = "34"
 agp = "8.7.2"
 kotlin = "2.3.20"

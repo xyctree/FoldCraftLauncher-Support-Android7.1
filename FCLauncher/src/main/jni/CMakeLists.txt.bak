@@ -189,9 +189,3 @@ if(${ANDROID_ABI} STREQUAL "arm64-v8a")
         GLESv2
     )
 endif()
-
-target_compile_definitions(
-    pojavexec
-    PRIVATE
-    __ANDROID_API__=24
-)

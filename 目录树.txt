@@ -1,0 +1,1863 @@
+.
+├── .gitattributes
+├── .github
+│   ├── ISSUE_TEMPLATE
+│   │   ├── bug-report.yml
+│   │   ├── config.yml
+│   │   └── feature-request.yml
+│   ├── images
+│   │   ├── game.jpg
+│   │   ├── ui_main_dark.jpg
+│   │   └── ui_main_light.jpg
+│   └── workflows
+│       ├── build.yml
+│       ├── cleanup-artifacts.yml
+│       └── release.yml
+├── .gitignore
+├── .gitmodules
+├── FCL
+│   ├── .gitignore
+│   ├── build.gradle.kts
+│   ├── libs
+│   │   ├── NG-GL4ES-release.aar
+│   │   ├── lwjgl3-natives-release.aar
+│   │   ├── openal-soft-release.aar
+│   │   └── spirv-cross-natives.aar
+│   └── src
+│       └── main
+│           ├── AndroidManifest.xml
+│           ├── assets
+│           │   ├── app_runtime
+│           │   │   ├── caciocavallo
+│           │   │   │   ├── ResConfHack.jar
+│           │   │   │   ├── cacio-androidnw-1.10-SNAPSHOT.jar
+│           │   │   │   ├── cacio-shared-1.10-SNAPSHOT.jar
+│           │   │   │   └── version
+│           │   │   ├── caciocavallo17
+│           │   │   │   ├── cacio-agent.jar
+│           │   │   │   ├── cacio-shared-1.19.1-SNAPSHOT.jar
+│           │   │   │   ├── cacio-tta-1.19.1-SNAPSHOT.jar
+│           │   │   │   └── version
+│           │   │   ├── java
+│           │   │   │   ├── jre17
+│           │   │   │   │   ├── bin-arm.tar.xz
+│           │   │   │   │   ├── bin-arm64.tar.xz
+│           │   │   │   │   ├── bin-x86.tar.xz
+│           │   │   │   │   ├── bin-x86_64.tar.xz
+│           │   │   │   │   ├── universal.tar.xz
+│           │   │   │   │   └── version
+│           │   │   │   ├── jre21
+│           │   │   │   │   ├── bin-arm.tar.xz
+│           │   │   │   │   ├── bin-arm64.tar.xz
+│           │   │   │   │   ├── bin-x86.tar.xz
+│           │   │   │   │   ├── bin-x86_64.tar.xz
+│           │   │   │   │   ├── universal.tar.xz
+│           │   │   │   │   └── version
+│           │   │   │   ├── jre25
+│           │   │   │   │   ├── bin-arm.tar.xz
+│           │   │   │   │   ├── bin-arm64.tar.xz
+│           │   │   │   │   ├── bin-x86_64.tar.xz
+│           │   │   │   │   ├── universal.tar.xz
+│           │   │   │   │   └── version
+│           │   │   │   └── jre8
+│           │   │   │       ├── bin-arm.tar.xz
+│           │   │   │       ├── bin-arm64.tar.xz
+│           │   │   │       ├── bin-x86.tar.xz
+│           │   │   │       ├── bin-x86_64.tar.xz
+│           │   │   │       ├── universal.tar.xz
+│           │   │   │       └── version
+│           │   │   ├── jna
+│           │   │   │   ├── jna-arm64.zip
+│           │   │   │   └── version
+│           │   │   └── lwjgl
+│           │   │       ├── lwjgl.jar
+│           │   │       └── version
+│           │   ├── controllers
+│           │   │   └── 00000000.json
+│           │   ├── eula.txt
+│           │   ├── game
+│           │   │   ├── HMCLTransformerDiscoveryService-1.0.jar
+│           │   │   ├── MioLaunchWrapper.jar
+│           │   │   ├── MioLibPatcher.jar
+│           │   │   ├── log4j2-1.12-debug.xml
+│           │   │   ├── log4j2-1.12.xml
+│           │   │   ├── log4j2-1.7-debug.xml
+│           │   │   ├── log4j2-1.7.xml
+│           │   │   ├── unlisted-versions.json
+│           │   │   ├── version-alias.csv
+│           │   │   └── versions.txt
+│           │   ├── img
+│           │   │   ├── alex.png
+│           │   │   ├── ari.png
+│           │   │   ├── efe.png
+│           │   │   ├── kai.png
+│           │   │   ├── makena.png
+│           │   │   ├── noor.png
+│           │   │   ├── steve.png
+│           │   │   ├── sunny.png
+│           │   │   └── zuri.png
+│           │   ├── map.json
+│           │   ├── microsoft_auth.html
+│           │   ├── mod_data.txt
+│           │   ├── modpack_data.txt
+│           │   └── options.txt
+│           ├── java
+│           │   └── com
+│           │       ├── mio
+│           │       │   ├── datastore
+│           │       │   │   └── GameItemBarSetting.kt
+│           │       │   ├── manager
+│           │       │   │   └── RendererManager.kt
+│           │       │   ├── minecraft
+│           │       │   │   └── ModChecker.kt
+│           │       │   ├── touchcontroller
+│           │       │   │   ├── TouchController.kt
+│           │       │   │   └── TouchControllerInputView.kt
+│           │       │   ├── ui
+│           │       │   │   ├── adapter
+│           │       │   │   │   ├── GamepadMapItemAdapter.kt
+│           │       │   │   │   └── ManageJavaItemAdapter.kt
+│           │       │   │   ├── dialog
+│           │       │   │   │   ├── DriverSelectDialog.kt
+│           │       │   │   │   ├── GamepadMapDialog.kt
+│           │       │   │   │   ├── JavaManageDialog.kt
+│           │       │   │   │   └── RendererSelectDialog.kt
+│           │       │   │   ├── view
+│           │       │   │   │   └── DraggableTextView.kt
+│           │       │   │   └── widget
+│           │       │   │       └── FCLAppBarLayout.kt
+│           │       │   └── util
+│           │       │       ├── AnimUtil.kt
+│           │       │       └── GuideUtil.kt
+│           │       └── tungsten
+│           │           └── fcl
+│           │               ├── activity
+│           │               │   ├── ControllerActivity.java
+│           │               │   ├── JVMActivity.java
+│           │               │   ├── JVMCrashActivity.java
+│           │               │   ├── MainActivity.kt
+│           │               │   ├── ShellActivity.java
+│           │               │   ├── SplashActivity.kt
+│           │               │   └── WebActivity.java
+│           │               ├── control
+│           │               │   ├── AWTInput.java
+│           │               │   ├── AddButtonStyleDialog.java
+│           │               │   ├── AddDirectionStyleDialog.java
+│           │               │   ├── AddInputTextDialog.java
+│           │               │   ├── ButtonStyleAdapter.java
+│           │               │   ├── ButtonStyleDialog.java
+│           │               │   ├── DirectionStyleAdapter.java
+│           │               │   ├── DirectionStyleDialog.java
+│           │               │   ├── EditViewDialog.java
+│           │               │   ├── EditViewGroupDialog.java
+│           │               │   ├── FCLInput.java
+│           │               │   ├── GameItemBarSettingDialog.kt
+│           │               │   ├── GameMenu.java
+│           │               │   ├── GestureMode.java
+│           │               │   ├── Gyroscope.java
+│           │               │   ├── InputTextAdapter.java
+│           │               │   ├── JarExecutorMenu.java
+│           │               │   ├── MenuCallback.java
+│           │               │   ├── MenuType.java
+│           │               │   ├── MouseMoveMode.java
+│           │               │   ├── MultiPlayerProfileAdapter.java
+│           │               │   ├── MultiplayerDialog.java
+│           │               │   ├── OpenFolderDialog.kt
+│           │               │   ├── QuickInputDialog.kt
+│           │               │   ├── SelectControllerDialog.java
+│           │               │   ├── SelectKeycodeDialog.kt
+│           │               │   ├── SelectableControllerListAdapter.java
+│           │               │   ├── ViewGroupAdapter.java
+│           │               │   ├── ViewGroupDialog.java
+│           │               │   ├── data
+│           │               │   │   ├── BaseInfoData.java
+│           │               │   │   ├── ButtonEventData.java
+│           │               │   │   ├── ButtonStyles.java
+│           │               │   │   ├── ControlButtonData.java
+│           │               │   │   ├── ControlButtonStyle.java
+│           │               │   │   ├── ControlDirectionData.java
+│           │               │   │   ├── ControlDirectionStyle.java
+│           │               │   │   ├── ControlViewGroup.java
+│           │               │   │   ├── CustomControl.java
+│           │               │   │   ├── DirectionEventData.java
+│           │               │   │   ├── DirectionStyles.java
+│           │               │   │   └── QuickInputTexts.java
+│           │               │   ├── download
+│           │               │   │   ├── ControllerCategory.java
+│           │               │   │   ├── ControllerIndex.java
+│           │               │   │   └── ControllerVersion.java
+│           │               │   ├── gamepad
+│           │               │   │   ├── Gamepad.kt
+│           │               │   │   ├── GamepadButton.kt
+│           │               │   │   ├── GamepadEmulatedButton.kt
+│           │               │   │   └── GamepadMap.kt
+│           │               │   ├── keyboard
+│           │               │   │   ├── AwtCharSender.java
+│           │               │   │   ├── CharacterSenderStrategy.java
+│           │               │   │   ├── LwjglCharSender.java
+│           │               │   │   └── TouchCharInput.java
+│           │               │   └── view
+│           │               │       ├── ControlButton.java
+│           │               │       ├── ControlDirection.java
+│           │               │       ├── CustomView.java
+│           │               │       ├── GameItemBar.kt
+│           │               │       ├── KeycodeView.java
+│           │               │       ├── LogWindow.java
+│           │               │       ├── MenuView.java
+│           │               │       ├── TouchPad.java
+│           │               │       ├── ViewListener.java
+│           │               │       └── ViewManager.java
+│           │               ├── fragment
+│           │               │   ├── EulaFragment.java
+│           │               │   └── RuntimeFragment.kt
+│           │               ├── game
+│           │               │   ├── FCLCacheRepository.java
+│           │               │   ├── FCLGameLauncher.java
+│           │               │   ├── FCLGameRepository.java
+│           │               │   ├── HMCLModpackInstallTask.java
+│           │               │   ├── HMCLModpackManifest.java
+│           │               │   ├── HMCLModpackProvider.java
+│           │               │   ├── JarExecutorHelper.java
+│           │               │   ├── JarExecutorLauncher.java
+│           │               │   ├── LauncherHelper.java
+│           │               │   ├── LocalizedRemoteModRepository.java
+│           │               │   ├── LogExporter.java
+│           │               │   ├── ManuallyCreatedModpackException.java
+│           │               │   ├── ManuallyCreatedModpackInstallTask.java
+│           │               │   ├── ModpackHelper.java
+│           │               │   ├── OAuthServer.java
+│           │               │   └── TexturesLoader.java
+│           │               ├── scoped
+│           │               │   └── FolderProvider.java
+│           │               ├── setting
+│           │               │   ├── Accounts.java
+│           │               │   ├── AuthlibInjectorServers.java
+│           │               │   ├── Config.java
+│           │               │   ├── ConfigHolder.java
+│           │               │   ├── Controller.java
+│           │               │   ├── Controllers.java
+│           │               │   ├── DownloadProviders.java
+│           │               │   ├── GameOption.java
+│           │               │   ├── GlobalConfig.java
+│           │               │   ├── MenuSetting.kt
+│           │               │   ├── Profile.java
+│           │               │   ├── Profiles.kt
+│           │               │   ├── Settings.java
+│           │               │   └── VersionSetting.kt
+│           │               ├── terracotta
+│           │               │   ├── Terracotta.java
+│           │               │   ├── TerracottaNodeList.java
+│           │               │   ├── TerracottaState.java
+│           │               │   ├── TerracottaVPNService.java
+│           │               │   └── profile
+│           │               │       ├── ProfileKind.java
+│           │               │       └── TerracottaProfile.java
+│           │               ├── ui
+│           │               │   ├── InstallerItem.java
+│           │               │   ├── PageManager.java
+│           │               │   ├── TaskDialog.java
+│           │               │   ├── TaskListPane.java
+│           │               │   ├── UIListener.java
+│           │               │   ├── UIManager.kt
+│           │               │   ├── account
+│           │               │   │   ├── AccountListAdapter.java
+│           │               │   │   ├── AccountListItem.java
+│           │               │   │   ├── AccountUI.java
+│           │               │   │   ├── AddAuthlibInjectorServerDialog.java
+│           │               │   │   ├── ClassicAccountLoginDialog.java
+│           │               │   │   ├── CreateAccountDialog.java
+│           │               │   │   ├── OAuthAccountLoginDialog.java
+│           │               │   │   ├── OfflineAccountSkinDialog.java
+│           │               │   │   └── ServerListAdapter.java
+│           │               │   ├── controller
+│           │               │   │   ├── ControllerDownloadPage.java
+│           │               │   │   ├── ControllerInfoDialog.java
+│           │               │   │   ├── ControllerListAdapter.kt
+│           │               │   │   ├── ControllerManagePage.java
+│           │               │   │   ├── ControllerPageManager.kt
+│           │               │   │   ├── ControllerRepoPage.java
+│           │               │   │   ├── ControllerScreenshotAdapter.java
+│           │               │   │   ├── ControllerUI.java
+│           │               │   │   ├── ControllerUploadDialog.java
+│           │               │   │   ├── ControllerUploadPage.java
+│           │               │   │   ├── EditableControllerListAdapter.java
+│           │               │   │   ├── HistoricalListAdapter.java
+│           │               │   │   └── OldVersionDialog.java
+│           │               │   ├── download
+│           │               │   │   ├── DownloadPageManager.kt
+│           │               │   │   ├── DownloadUI.java
+│           │               │   │   ├── ModDownloadPage.java
+│           │               │   │   ├── ResourcePackDownloadPage.java
+│           │               │   │   ├── ShaderPackDownloadPage.java
+│           │               │   │   ├── TranslationDialog.kt
+│           │               │   │   ├── common
+│           │               │   │   │   ├── DependencyAdapter.java
+│           │               │   │   │   ├── DownloadAddonDialog.java
+│           │               │   │   │   ├── DownloadPage.java
+│           │               │   │   │   ├── ModGameVersionAdapter.java
+│           │               │   │   │   ├── ModVersionAdapter.java
+│           │               │   │   │   ├── RemoteModDownloadPage.java
+│           │               │   │   │   ├── RemoteModInfoPage.java
+│           │               │   │   │   ├── RemoteModListAdapter.java
+│           │               │   │   │   ├── RemoteModScreenshotAdapter.kt
+│           │               │   │   │   └── RemoteModVersionPage.java
+│           │               │   │   ├── modpack
+│           │               │   │   │   ├── LocalModpackPage.java
+│           │               │   │   │   ├── ModpackDownloadPage.java
+│           │               │   │   │   ├── ModpackInstaller.java
+│           │               │   │   │   ├── ModpackPage.java
+│           │               │   │   │   ├── ModpackSelectionPage.java
+│           │               │   │   │   ├── ModpackUrlDialog.java
+│           │               │   │   │   └── RemoteModpackPage.java
+│           │               │   │   └── version
+│           │               │   │       ├── InstallerListPage.java
+│           │               │   │       ├── RemoteVersionListAdapter.kt
+│           │               │   │       ├── VersionInstallInfoPage.java
+│           │               │   │       └── VersionInstallPage.java
+│           │               │   ├── main
+│           │               │   │   ├── Announcement.java
+│           │               │   │   └── MainUI.java
+│           │               │   ├── manage
+│           │               │   │   ├── DatapackListAdapter.java
+│           │               │   │   ├── DatapackListPage.java
+│           │               │   │   ├── InstallerListPage.java
+│           │               │   │   ├── LocalModListAdapter.kt
+│           │               │   │   ├── ManagePage.kt
+│           │               │   │   ├── ManagePageManager.kt
+│           │               │   │   ├── ManageUI.java
+│           │               │   │   ├── ModCheckUpdatesTask.java
+│           │               │   │   ├── ModInfoDialog.java
+│           │               │   │   ├── ModListPage.java
+│           │               │   │   ├── ModOldVersionListAdapter.java
+│           │               │   │   ├── ModRollbackDialog.java
+│           │               │   │   ├── ModUpdateListAdapter.java
+│           │               │   │   ├── ModUpdatesPage.java
+│           │               │   │   ├── ModpackFileSelectionPage.java
+│           │               │   │   ├── ModpackInfoPage.java
+│           │               │   │   ├── ModpackTypeSelectionPage.java
+│           │               │   │   ├── VersionSettingPage.java
+│           │               │   │   ├── WorldExportDialog.java
+│           │               │   │   ├── WorldInfoPage.java
+│           │               │   │   ├── WorldListAdapter.java
+│           │               │   │   ├── WorldListItem.java
+│           │               │   │   ├── WorldListPage.java
+│           │               │   │   ├── WorldNameDialog.java
+│           │               │   │   ├── adapter
+│           │               │   │   │   └── ManageItemAdapter.kt
+│           │               │   │   └── item
+│           │               │   │       └── ManageItem.kt
+│           │               │   ├── multiplayer
+│           │               │   │   └── MultiplayerUI.java
+│           │               │   ├── setting
+│           │               │   │   ├── AboutPage.java
+│           │               │   │   ├── ArticleAdapter.java
+│           │               │   │   ├── DocCategoryAdapter.java
+│           │               │   │   ├── DocIndex.java
+│           │               │   │   ├── HelpPage.java
+│           │               │   │   ├── LauncherSettingPage.java
+│           │               │   │   ├── SettingPageManager.kt
+│           │               │   │   └── SettingUI.java
+│           │               │   └── version
+│           │               │       ├── AddProfileDialog.java
+│           │               │       ├── DuplicateVersionDialog.java
+│           │               │       ├── ModpackSelectionDialog.java
+│           │               │       ├── ProfileListAdapter.java
+│           │               │       ├── RenameVersionDialog.java
+│           │               │       ├── VersionListAdapter.kt
+│           │               │       ├── VersionListItem.java
+│           │               │       ├── VersionListPage.kt
+│           │               │       ├── VersionPageManager.java
+│           │               │       ├── VersionUI.java
+│           │               │       └── Versions.java
+│           │               ├── upgrade
+│           │               │   ├── RemoteVersion.java
+│           │               │   ├── UpdateChecker.java
+│           │               │   └── UpdateDialog.java
+│           │               └── util
+│           │                   ├── AndroidUtils.java
+│           │                   ├── Constants.java
+│           │                   ├── FXUtils.java
+│           │                   ├── ModTranslations.java
+│           │                   ├── RequestCodes.java
+│           │                   ├── ResourceNotFoundError.java
+│           │                   ├── RuntimeUtils.java
+│           │                   ├── ShellUtil.java
+│           │                   ├── TaskCancellationAction.java
+│           │                   └── WeakListenerHolder.java
+│           └── res
+│               ├── anim
+│               │   ├── frag_start_anim.xml
+│               │   ├── frag_stop_anim.xml
+│               │   ├── progress_indeterminate_rect1.xml
+│               │   └── progress_indeterminate_rect2.xml
+│               ├── drawable
+│               │   ├── april_fools.png
+│               │   ├── bg_container_transparent_clickable.xml
+│               │   ├── bg_container_transparent_selected.xml
+│               │   ├── bg_container_white.xml
+│               │   ├── bg_container_white_clickable.xml
+│               │   ├── bg_game_menu.xml
+│               │   ├── bg_item.xml
+│               │   ├── bg_item_clickable.xml
+│               │   ├── bg_progress.xml
+│               │   ├── bg_progress_indeterminate.xml
+│               │   ├── bg_right_menu.xml
+│               │   ├── bg_right_menu_button.xml
+│               │   ├── ic_baseline_account_circle_24.xml
+│               │   ├── ic_baseline_application_24.xml
+│               │   ├── ic_baseline_arrow_back_24.xml
+│               │   ├── ic_baseline_arrow_downward_24.xml
+│               │   ├── ic_baseline_arrow_forward_24.xml
+│               │   ├── ic_baseline_arrow_upward_24.xml
+│               │   ├── ic_baseline_build_24.xml
+│               │   ├── ic_baseline_close_24.xml
+│               │   ├── ic_baseline_cloud_download_24.xml
+│               │   ├── ic_baseline_cloud_upload_24.xml
+│               │   ├── ic_baseline_content_copy_24.xml
+│               │   ├── ic_baseline_delete_24.xml
+│               │   ├── ic_baseline_done_24.xml
+│               │   ├── ic_baseline_download_24.xml
+│               │   ├── ic_baseline_earth_24.xml
+│               │   ├── ic_baseline_easytier_24.xml
+│               │   ├── ic_baseline_edit_24.xml
+│               │   ├── ic_baseline_feedback_24.xml
+│               │   ├── ic_baseline_guest_24.xml
+│               │   ├── ic_baseline_hanger_24.xml
+│               │   ├── ic_baseline_home_24.xml
+│               │   ├── ic_baseline_host_24.xml
+│               │   ├── ic_baseline_input_24.xml
+│               │   ├── ic_baseline_jump_24.xml
+│               │   ├── ic_baseline_keyboard_24.xml
+│               │   ├── ic_baseline_list_24.xml
+│               │   ├── ic_baseline_microsoft_24.xml
+│               │   ├── ic_baseline_more_horiz_24.xml
+│               │   ├── ic_baseline_output_24.xml
+│               │   ├── ic_baseline_person_add_24.xml
+│               │   ├── ic_baseline_refresh_24.xml
+│               │   ├── ic_baseline_restore_24.xml
+│               │   ├── ic_baseline_save_24.xml
+│               │   ├── ic_baseline_screenshot_24.xml
+│               │   ├── ic_baseline_script_24.xml
+│               │   ├── ic_baseline_server_24.xml
+│               │   ├── ic_baseline_settings_24.xml
+│               │   ├── ic_baseline_texture_24.xml
+│               │   ├── ic_baseline_tune_24.xml
+│               │   ├── ic_baseline_update_24.xml
+│               │   ├── ic_baseline_videogame_asset_24.xml
+│               │   ├── ic_baseline_wifi_24.xml
+│               │   ├── ic_boat.xml
+│               │   ├── ic_cube.xml
+│               │   ├── ic_outline_account_tree_24.xml
+│               │   ├── ic_outline_extension_24.xml
+│               │   ├── ic_outline_info_24.xml
+│               │   ├── ic_pojav.xml
+│               │   ├── ic_translation.xml
+│               │   ├── img_app.png
+│               │   ├── img_chicken.png
+│               │   ├── img_cleanroom.png
+│               │   ├── img_command.png
+│               │   ├── img_craft_table.png
+│               │   ├── img_cursor.png
+│               │   ├── img_enchantnet.png
+│               │   ├── img_fabric.png
+│               │   ├── img_forge.png
+│               │   ├── img_grass.png
+│               │   ├── img_neoforge.png
+│               │   ├── img_optifine.png
+│               │   ├── img_quilt.png
+│               │   ├── java.xml
+│               │   ├── keycode_view_normal.xml
+│               │   └── keycode_view_selected.xml
+│               ├── layout
+│               │   ├── activity_jvm.xml
+│               │   ├── activity_jvm_crash.xml
+│               │   ├── activity_main.xml
+│               │   ├── activity_shell.xml
+│               │   ├── activity_splash.xml
+│               │   ├── activity_web.xml
+│               │   ├── dialog_add_authlib_injector_server.xml
+│               │   ├── dialog_add_button_style.xml
+│               │   ├── dialog_add_direction_style.xml
+│               │   ├── dialog_add_input_text.xml
+│               │   ├── dialog_add_profile.xml
+│               │   ├── dialog_character_selector.xml
+│               │   ├── dialog_controller_info.xml
+│               │   ├── dialog_controller_upload.xml
+│               │   ├── dialog_create_account.xml
+│               │   ├── dialog_download_addon.xml
+│               │   ├── dialog_download_controllor.xml
+│               │   ├── dialog_duplicate_version.xml
+│               │   ├── dialog_edit_view.xml
+│               │   ├── dialog_edit_view_group.xml
+│               │   ├── dialog_gamepad_map.xml
+│               │   ├── dialog_input_invite_code.xml
+│               │   ├── dialog_itembar_setting.xml
+│               │   ├── dialog_manage_button_style.xml
+│               │   ├── dialog_manage_direction_style.xml
+│               │   ├── dialog_manage_java.xml
+│               │   ├── dialog_manage_view_groups.xml
+│               │   ├── dialog_mod_info.xml
+│               │   ├── dialog_modpack_selection.xml
+│               │   ├── dialog_modpack_url.xml
+│               │   ├── dialog_multiplyer_menu.xml
+│               │   ├── dialog_offline_account_skin.xml
+│               │   ├── dialog_open_folder.xml
+│               │   ├── dialog_quick_input.xml
+│               │   ├── dialog_relogin_classic.xml
+│               │   ├── dialog_relogin_oauth.xml
+│               │   ├── dialog_rename_version.xml
+│               │   ├── dialog_rollback_mod.xml
+│               │   ├── dialog_select_controller.xml
+│               │   ├── dialog_select_keycode.xml
+│               │   ├── dialog_select_renderer.xml
+│               │   ├── dialog_skip_login.xml
+│               │   ├── dialog_task.xml
+│               │   ├── dialog_tip_relogin.xml
+│               │   ├── dialog_translation.xml
+│               │   ├── dialog_update.xml
+│               │   ├── dialog_world_export.xml
+│               │   ├── dialog_world_name.xml
+│               │   ├── fragment_eula.xml
+│               │   ├── fragment_runtime.xml
+│               │   ├── item_account.xml
+│               │   ├── item_article.xml
+│               │   ├── item_authlib_injector_server.xml
+│               │   ├── item_button_style.xml
+│               │   ├── item_character.xml
+│               │   ├── item_controller_editable.xml
+│               │   ├── item_controller_selectable.xml
+│               │   ├── item_datapack.xml
+│               │   ├── item_direction_style.xml
+│               │   ├── item_gamepad_map.xml
+│               │   ├── item_input_text.xml
+│               │   ├── item_local_mod.xml
+│               │   ├── item_manage.xml
+│               │   ├── item_manage_java.xml
+│               │   ├── item_mod_version.xml
+│               │   ├── item_profile.xml
+│               │   ├── item_remote_version.xml
+│               │   ├── item_renderer.xml
+│               │   ├── item_screenshot_path.xml
+│               │   ├── item_spinner.xml
+│               │   ├── item_spinner_auto_tint.xml
+│               │   ├── item_spinner_dropdown.xml
+│               │   ├── item_spinner_dropdown_small.xml
+│               │   ├── item_spinner_small.xml
+│               │   ├── item_spinner_theme_color.xml
+│               │   ├── item_task_progress.xml
+│               │   ├── item_task_stage.xml
+│               │   ├── item_terracotta_profile.xml
+│               │   ├── item_translation.xml
+│               │   ├── item_update_mod.xml
+│               │   ├── item_version.xml
+│               │   ├── item_view_group.xml
+│               │   ├── item_world.xml
+│               │   ├── menu_left.xml
+│               │   ├── menu_right.xml
+│               │   ├── page_controller_download.xml
+│               │   ├── page_controller_manager.xml
+│               │   ├── page_controller_repo.xml
+│               │   ├── page_controller_upload.xml
+│               │   ├── page_datapack_list.xml
+│               │   ├── page_download.xml
+│               │   ├── page_download_addon.xml
+│               │   ├── page_download_addon_info.xml
+│               │   ├── page_download_addon_version.xml
+│               │   ├── page_install_version.xml
+│               │   ├── page_installer.xml
+│               │   ├── page_manage_auto_install.xml
+│               │   ├── page_manage_mod.xml
+│               │   ├── page_manage_version.xml
+│               │   ├── page_manage_world.xml
+│               │   ├── page_manage_world_info.xml
+│               │   ├── page_mod_update.xml
+│               │   ├── page_modpack.xml
+│               │   ├── page_modpack_file.xml
+│               │   ├── page_modpack_info.xml
+│               │   ├── page_modpack_selection.xml
+│               │   ├── page_modpack_type.xml
+│               │   ├── page_setting_about.xml
+│               │   ├── page_setting_help.xml
+│               │   ├── page_setting_launcher.xml
+│               │   ├── page_version_list.xml
+│               │   ├── page_version_setting.xml
+│               │   ├── ui_account.xml
+│               │   ├── ui_controller.xml
+│               │   ├── ui_download.xml
+│               │   ├── ui_main.xml
+│               │   ├── ui_manage.xml
+│               │   ├── ui_multiplayer.xml
+│               │   ├── ui_setting.xml
+│               │   ├── ui_version.xml
+│               │   ├── view_button_style.xml
+│               │   ├── view_create_account_external.xml
+│               │   ├── view_create_account_microsoft.xml
+│               │   ├── view_create_account_offline.xml
+│               │   ├── view_direction_style_button.xml
+│               │   ├── view_direction_style_rocker.xml
+│               │   ├── view_edit_button_event.xml
+│               │   ├── view_edit_button_event_child.xml
+│               │   ├── view_edit_button_info.xml
+│               │   ├── view_edit_direction_event.xml
+│               │   ├── view_edit_direction_info.xml
+│               │   ├── view_game_menu.xml
+│               │   ├── view_installer_item.xml
+│               │   ├── view_jar_executor_menu.xml
+│               │   ├── view_keyboard.xml
+│               │   ├── view_mod_screenshot.xml
+│               │   ├── view_multiplayer_exception.xml
+│               │   ├── view_multiplayer_host_guest_ok.xml
+│               │   ├── view_multiplayer_scanning.xml
+│               │   ├── view_multiplayer_starting.xml
+│               │   └── view_multiplayer_waiting.xml
+│               ├── mipmap-anydpi-v26
+│               │   └── ic_launcher.xml
+│               ├── mipmap-hdpi
+│               │   ├── ic_launcher_foreground.webp
+│               │   └── ic_launcher_round.png
+│               ├── mipmap-mdpi
+│               │   ├── ic_launcher_foreground.webp
+│               │   └── ic_launcher_round.png
+│               ├── mipmap-xhdpi
+│               │   ├── ic_launcher_foreground.webp
+│               │   └── ic_launcher_round.png
+│               ├── mipmap-xxhdpi
+│               │   ├── ic_launcher_foreground.webp
+│               │   └── ic_launcher_round.png
+│               ├── mipmap-xxxhdpi
+│               │   ├── ic_launcher_foreground.webp
+│               │   └── ic_launcher_round.png
+│               ├── values
+│               │   ├── attrs.xml
+│               │   ├── colors.xml
+│               │   ├── strings.xml
+│               │   └── themes.xml
+│               ├── values-de
+│               │   └── strings.xml
+│               ├── values-fa
+│               │   └── strings.xml
+│               ├── values-night
+│               │   ├── colors.xml
+│               │   └── themes.xml
+│               ├── values-pt-rBR
+│               │   └── strings.xml
+│               ├── values-ru
+│               │   └── strings.xml
+│               ├── values-uk
+│               │   └── strings.xml
+│               ├── values-v31
+│               │   ├── colors.xml
+│               │   └── themes.xml
+│               ├── values-zh
+│               │   └── strings.xml
+│               ├── values-zh-rHK
+│               │   └── strings.xml
+│               └── xml
+│                   ├── backup_rules.xml
+│                   ├── data_extraction_rules.xml
+│                   ├── network_security_config.xml
+│                   └── provider_paths.xml
+├── FCLCore
+│   ├── .gitignore
+│   ├── build.gradle.kts
+│   └── src
+│       └── main
+│           ├── java
+│           │   ├── com
+│           │   │   ├── mio
+│           │   │   │   ├── JavaManager.kt
+│           │   │   │   └── util
+│           │   │   │       ├── ParseUtil.java
+│           │   │   │       └── PerfUtil.kt
+│           │   │   └── tungsten
+│           │   │       ├── fcl
+│           │   │       │   └── FCLApplication.java
+│           │   │       └── fclcore
+│           │   │           ├── auth
+│           │   │           │   ├── Account.java
+│           │   │           │   ├── AccountFactory.java
+│           │   │           │   ├── AuthInfo.java
+│           │   │           │   ├── AuthenticationException.java
+│           │   │           │   ├── CharacterDeletedException.java
+│           │   │           │   ├── CharacterSelector.java
+│           │   │           │   ├── ClassicAccount.java
+│           │   │           │   ├── CredentialExpiredException.java
+│           │   │           │   ├── NoCharacterException.java
+│           │   │           │   ├── NoSelectedCharacterException.java
+│           │   │           │   ├── NotLoggedInException.java
+│           │   │           │   ├── OAuth.java
+│           │   │           │   ├── OAuthAccount.java
+│           │   │           │   ├── ServerDisconnectException.java
+│           │   │           │   ├── ServerResponseMalformedException.java
+│           │   │           │   ├── authlibinjector
+│           │   │           │   │   ├── AuthlibInjectorAccount.java
+│           │   │           │   │   ├── AuthlibInjectorAccountFactory.java
+│           │   │           │   │   ├── AuthlibInjectorArtifactInfo.java
+│           │   │           │   │   ├── AuthlibInjectorArtifactProvider.java
+│           │   │           │   │   ├── AuthlibInjectorDownloadException.java
+│           │   │           │   │   ├── AuthlibInjectorDownloader.java
+│           │   │           │   │   ├── AuthlibInjectorProvider.java
+│           │   │           │   │   ├── AuthlibInjectorServer.java
+│           │   │           │   │   ├── BoundAuthlibInjectorAccountFactory.java
+│           │   │           │   │   └── SimpleAuthlibInjectorArtifactProvider.java
+│           │   │           │   ├── microsoft
+│           │   │           │   │   ├── MicrosoftAccount.java
+│           │   │           │   │   ├── MicrosoftAccountFactory.java
+│           │   │           │   │   ├── MicrosoftService.java
+│           │   │           │   │   └── MicrosoftSession.java
+│           │   │           │   ├── offline
+│           │   │           │   │   ├── OfflineAccount.java
+│           │   │           │   │   ├── OfflineAccountFactory.java
+│           │   │           │   │   ├── Skin.java
+│           │   │           │   │   ├── Texture.java
+│           │   │           │   │   └── YggdrasilServer.java
+│           │   │           │   └── yggdrasil
+│           │   │           │       ├── CompleteGameProfile.java
+│           │   │           │       ├── GameProfile.java
+│           │   │           │       ├── PropertyMapSerializer.java
+│           │   │           │       ├── RemoteAuthenticationException.java
+│           │   │           │       ├── Texture.java
+│           │   │           │       ├── TextureModel.java
+│           │   │           │       ├── TextureType.java
+│           │   │           │       ├── User.java
+│           │   │           │       ├── YggdrasilAccount.java
+│           │   │           │       ├── YggdrasilProvider.java
+│           │   │           │       ├── YggdrasilService.java
+│           │   │           │       └── YggdrasilSession.java
+│           │   │           ├── download
+│           │   │           │   ├── AbstractDependencyManager.java
+│           │   │           │   ├── AdaptedDownloadProvider.java
+│           │   │           │   ├── ArtifactMalformedException.java
+│           │   │           │   ├── AutoDownloadProvider.java
+│           │   │           │   ├── BMCLAPIDownloadProvider.java
+│           │   │           │   ├── BalancedDownloadProvider.java
+│           │   │           │   ├── DefaultCacheRepository.java
+│           │   │           │   ├── DefaultDependencyManager.java
+│           │   │           │   ├── DefaultGameBuilder.java
+│           │   │           │   ├── DependencyManager.java
+│           │   │           │   ├── DownloadProvider.java
+│           │   │           │   ├── GameBuilder.java
+│           │   │           │   ├── LibraryAnalyzer.java
+│           │   │           │   ├── MaintainTask.java
+│           │   │           │   ├── MojangDownloadProvider.java
+│           │   │           │   ├── MultipleSourceVersionList.java
+│           │   │           │   ├── ProcessService.kt
+│           │   │           │   ├── RemoteVersion.java
+│           │   │           │   ├── UnsupportedInstallationException.java
+│           │   │           │   ├── VersionList.java
+│           │   │           │   ├── VersionMismatchException.java
+│           │   │           │   ├── cleanroom
+│           │   │           │   │   ├── CleanroomInstallTask.java
+│           │   │           │   │   ├── CleanroomRemoteVersion.java
+│           │   │           │   │   └── CleanroomVersionList.java
+│           │   │           │   ├── fabric
+│           │   │           │   │   ├── FabricAPIInstallTask.java
+│           │   │           │   │   ├── FabricAPIRemoteVersion.java
+│           │   │           │   │   ├── FabricAPIVersionList.java
+│           │   │           │   │   ├── FabricInstallTask.java
+│           │   │           │   │   ├── FabricRemoteVersion.java
+│           │   │           │   │   └── FabricVersionList.java
+│           │   │           │   ├── forge
+│           │   │           │   │   ├── ForgeBMCLVersionList.java
+│           │   │           │   │   ├── ForgeInstall.java
+│           │   │           │   │   ├── ForgeInstallProfile.java
+│           │   │           │   │   ├── ForgeInstallTask.java
+│           │   │           │   │   ├── ForgeNewInstallProfile.java
+│           │   │           │   │   ├── ForgeNewInstallTask.java
+│           │   │           │   │   ├── ForgeOldInstallTask.java
+│           │   │           │   │   ├── ForgeRemoteVersion.java
+│           │   │           │   │   ├── ForgeVersion.java
+│           │   │           │   │   ├── ForgeVersionList.java
+│           │   │           │   │   └── ForgeVersionRoot.java
+│           │   │           │   ├── game
+│           │   │           │   │   ├── GameAssetDownloadTask.java
+│           │   │           │   │   ├── GameAssetIndexDownloadTask.java
+│           │   │           │   │   ├── GameDownloadTask.java
+│           │   │           │   │   ├── GameInstallTask.java
+│           │   │           │   │   ├── GameLibrariesTask.java
+│           │   │           │   │   ├── GameRemoteLatestVersions.java
+│           │   │           │   │   ├── GameRemoteVersion.java
+│           │   │           │   │   ├── GameRemoteVersionInfo.java
+│           │   │           │   │   ├── GameRemoteVersions.java
+│           │   │           │   │   ├── GameVerificationFixTask.java
+│           │   │           │   │   ├── GameVersionList.java
+│           │   │           │   │   ├── LibraryDownloadException.java
+│           │   │           │   │   ├── LibraryDownloadTask.java
+│           │   │           │   │   ├── VersionJsonDownloadTask.java
+│           │   │           │   │   └── VersionJsonSaveTask.java
+│           │   │           │   ├── liteloader
+│           │   │           │   │   ├── LiteLoaderBMCLVersionList.java
+│           │   │           │   │   ├── LiteLoaderBranch.java
+│           │   │           │   │   ├── LiteLoaderGameVersions.java
+│           │   │           │   │   ├── LiteLoaderInstallTask.java
+│           │   │           │   │   ├── LiteLoaderRemoteVersion.java
+│           │   │           │   │   ├── LiteLoaderRepository.java
+│           │   │           │   │   ├── LiteLoaderVersion.java
+│           │   │           │   │   ├── LiteLoaderVersionList.java
+│           │   │           │   │   ├── LiteLoaderVersionsMeta.java
+│           │   │           │   │   └── LiteLoaderVersionsRoot.java
+│           │   │           │   ├── neoforge
+│           │   │           │   │   ├── NeoForgeBMCLVersionList.java
+│           │   │           │   │   ├── NeoForgeInstallTask.java
+│           │   │           │   │   ├── NeoForgeOfficialVersionList.java
+│           │   │           │   │   ├── NeoForgeOldInstallTask.java
+│           │   │           │   │   └── NeoForgeRemoteVersion.java
+│           │   │           │   ├── optifine
+│           │   │           │   │   ├── OptiFine302VersionList.java
+│           │   │           │   │   ├── OptiFineBMCLVersionList.java
+│           │   │           │   │   ├── OptiFineInstallTask.java
+│           │   │           │   │   └── OptiFineRemoteVersion.java
+│           │   │           │   └── quilt
+│           │   │           │       ├── QuiltAPIInstallTask.java
+│           │   │           │       ├── QuiltAPIRemoteVersion.java
+│           │   │           │       ├── QuiltAPIVersionList.java
+│           │   │           │       ├── QuiltInstallTask.java
+│           │   │           │       ├── QuiltRemoteVersion.java
+│           │   │           │       └── QuiltVersionList.java
+│           │   │           ├── event
+│           │   │           │   ├── Event.java
+│           │   │           │   ├── EventBus.java
+│           │   │           │   ├── EventManager.java
+│           │   │           │   ├── EventPriority.java
+│           │   │           │   ├── FailedEvent.java
+│           │   │           │   ├── GameJsonParseFailedEvent.java
+│           │   │           │   ├── LoadedOneVersionEvent.java
+│           │   │           │   ├── RefreshedVersionsEvent.java
+│           │   │           │   ├── RefreshingVersionsEvent.java
+│           │   │           │   ├── RemoveVersionEvent.java
+│           │   │           │   └── RenameVersionEvent.java
+│           │   │           ├── fakefx
+│           │   │           │   ├── FXPermissions.java
+│           │   │           │   ├── PlatformUtil.java
+│           │   │           │   ├── UnmodifiableArrayList.java
+│           │   │           │   ├── beans
+│           │   │           │   │   ├── DefaultProperty.java
+│           │   │           │   │   ├── IDProperty.java
+│           │   │           │   │   ├── InvalidationListener.java
+│           │   │           │   │   ├── NamedArg.java
+│           │   │           │   │   ├── Observable.java
+│           │   │           │   │   ├── WeakInvalidationListener.java
+│           │   │           │   │   ├── WeakListener.java
+│           │   │           │   │   ├── binding
+│           │   │           │   │   │   ├── Binding.java
+│           │   │           │   │   │   ├── Bindings.java
+│           │   │           │   │   │   ├── BooleanBinding.java
+│           │   │           │   │   │   ├── BooleanExpression.java
+│           │   │           │   │   │   ├── DoubleBinding.java
+│           │   │           │   │   │   ├── DoubleExpression.java
+│           │   │           │   │   │   ├── FloatBinding.java
+│           │   │           │   │   │   ├── FloatExpression.java
+│           │   │           │   │   │   ├── IntegerBinding.java
+│           │   │           │   │   │   ├── IntegerExpression.java
+│           │   │           │   │   │   ├── ListBinding.java
+│           │   │           │   │   │   ├── ListExpression.java
+│           │   │           │   │   │   ├── LongBinding.java
+│           │   │           │   │   │   ├── LongExpression.java
+│           │   │           │   │   │   ├── MapBinding.java
+│           │   │           │   │   │   ├── MapExpression.java
+│           │   │           │   │   │   ├── NumberBinding.java
+│           │   │           │   │   │   ├── NumberExpression.java
+│           │   │           │   │   │   ├── NumberExpressionBase.java
+│           │   │           │   │   │   ├── ObjectBinding.java
+│           │   │           │   │   │   ├── ObjectExpression.java
+│           │   │           │   │   │   ├── SetBinding.java
+│           │   │           │   │   │   ├── SetExpression.java
+│           │   │           │   │   │   ├── StringBinding.java
+│           │   │           │   │   │   ├── StringExpression.java
+│           │   │           │   │   │   └── When.java
+│           │   │           │   │   ├── property
+│           │   │           │   │   │   ├── BooleanProperty.java
+│           │   │           │   │   │   ├── BooleanPropertyBase.java
+│           │   │           │   │   │   ├── DoubleProperty.java
+│           │   │           │   │   │   ├── DoublePropertyBase.java
+│           │   │           │   │   │   ├── FloatProperty.java
+│           │   │           │   │   │   ├── FloatPropertyBase.java
+│           │   │           │   │   │   ├── IntegerProperty.java
+│           │   │           │   │   │   ├── IntegerPropertyBase.java
+│           │   │           │   │   │   ├── ListProperty.java
+│           │   │           │   │   │   ├── ListPropertyBase.java
+│           │   │           │   │   │   ├── LongProperty.java
+│           │   │           │   │   │   ├── LongPropertyBase.java
+│           │   │           │   │   │   ├── MapProperty.java
+│           │   │           │   │   │   ├── MapPropertyBase.java
+│           │   │           │   │   │   ├── ObjectProperty.java
+│           │   │           │   │   │   ├── ObjectPropertyBase.java
+│           │   │           │   │   │   ├── Property.java
+│           │   │           │   │   │   ├── ReadOnlyBooleanProperty.java
+│           │   │           │   │   │   ├── ReadOnlyBooleanPropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlyBooleanWrapper.java
+│           │   │           │   │   │   ├── ReadOnlyDoubleProperty.java
+│           │   │           │   │   │   ├── ReadOnlyDoublePropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlyDoubleWrapper.java
+│           │   │           │   │   │   ├── ReadOnlyFloatProperty.java
+│           │   │           │   │   │   ├── ReadOnlyFloatPropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlyFloatWrapper.java
+│           │   │           │   │   │   ├── ReadOnlyIntegerProperty.java
+│           │   │           │   │   │   ├── ReadOnlyIntegerPropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlyIntegerWrapper.java
+│           │   │           │   │   │   ├── ReadOnlyListProperty.java
+│           │   │           │   │   │   ├── ReadOnlyListPropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlyListWrapper.java
+│           │   │           │   │   │   ├── ReadOnlyLongProperty.java
+│           │   │           │   │   │   ├── ReadOnlyLongPropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlyLongWrapper.java
+│           │   │           │   │   │   ├── ReadOnlyMapProperty.java
+│           │   │           │   │   │   ├── ReadOnlyMapPropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlyMapWrapper.java
+│           │   │           │   │   │   ├── ReadOnlyObjectProperty.java
+│           │   │           │   │   │   ├── ReadOnlyObjectPropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlyObjectWrapper.java
+│           │   │           │   │   │   ├── ReadOnlyProperty.java
+│           │   │           │   │   │   ├── ReadOnlySetProperty.java
+│           │   │           │   │   │   ├── ReadOnlySetPropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlySetWrapper.java
+│           │   │           │   │   │   ├── ReadOnlyStringProperty.java
+│           │   │           │   │   │   ├── ReadOnlyStringPropertyBase.java
+│           │   │           │   │   │   ├── ReadOnlyStringWrapper.java
+│           │   │           │   │   │   ├── SetProperty.java
+│           │   │           │   │   │   ├── SetPropertyBase.java
+│           │   │           │   │   │   ├── SimpleBooleanProperty.java
+│           │   │           │   │   │   ├── SimpleDoubleProperty.java
+│           │   │           │   │   │   ├── SimpleFloatProperty.java
+│           │   │           │   │   │   ├── SimpleIntegerProperty.java
+│           │   │           │   │   │   ├── SimpleListProperty.java
+│           │   │           │   │   │   ├── SimpleLongProperty.java
+│           │   │           │   │   │   ├── SimpleMapProperty.java
+│           │   │           │   │   │   ├── SimpleObjectProperty.java
+│           │   │           │   │   │   ├── SimpleSetProperty.java
+│           │   │           │   │   │   ├── SimpleStringProperty.java
+│           │   │           │   │   │   ├── StringProperty.java
+│           │   │           │   │   │   ├── StringPropertyBase.java
+│           │   │           │   │   │   └── adapter
+│           │   │           │   │   │       ├── DescriptorListenerCleaner.java
+│           │   │           │   │   │       ├── JavaBeanBooleanProperty.java
+│           │   │           │   │   │       ├── JavaBeanBooleanPropertyBuilder.java
+│           │   │           │   │   │       ├── JavaBeanDoubleProperty.java
+│           │   │           │   │   │       ├── JavaBeanDoublePropertyBuilder.java
+│           │   │           │   │   │       ├── JavaBeanFloatProperty.java
+│           │   │           │   │   │       ├── JavaBeanFloatPropertyBuilder.java
+│           │   │           │   │   │       ├── JavaBeanIntegerProperty.java
+│           │   │           │   │   │       ├── JavaBeanIntegerPropertyBuilder.java
+│           │   │           │   │   │       ├── JavaBeanLongProperty.java
+│           │   │           │   │   │       ├── JavaBeanLongPropertyBuilder.java
+│           │   │           │   │   │       ├── JavaBeanObjectProperty.java
+│           │   │           │   │   │       ├── JavaBeanObjectPropertyBuilder.java
+│           │   │           │   │   │       ├── JavaBeanProperty.java
+│           │   │           │   │   │       ├── JavaBeanStringProperty.java
+│           │   │           │   │   │       ├── JavaBeanStringPropertyBuilder.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanBooleanProperty.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanBooleanPropertyBuilder.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanDoubleProperty.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanDoublePropertyBuilder.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanFloatProperty.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanFloatPropertyBuilder.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanIntegerProperty.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanIntegerPropertyBuilder.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanLongProperty.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanLongPropertyBuilder.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanObjectProperty.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanObjectPropertyBuilder.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanProperty.java
+│           │   │           │   │   │       ├── ReadOnlyJavaBeanStringProperty.java
+│           │   │           │   │   │       └── ReadOnlyJavaBeanStringPropertyBuilder.java
+│           │   │           │   │   └── value
+│           │   │           │   │       ├── ChangeListener.java
+│           │   │           │   │       ├── ObservableBooleanValue.java
+│           │   │           │   │       ├── ObservableDoubleValue.java
+│           │   │           │   │       ├── ObservableFloatValue.java
+│           │   │           │   │       ├── ObservableIntegerValue.java
+│           │   │           │   │       ├── ObservableListValue.java
+│           │   │           │   │       ├── ObservableLongValue.java
+│           │   │           │   │       ├── ObservableMapValue.java
+│           │   │           │   │       ├── ObservableNumberValue.java
+│           │   │           │   │       ├── ObservableObjectValue.java
+│           │   │           │   │       ├── ObservableSetValue.java
+│           │   │           │   │       ├── ObservableStringValue.java
+│           │   │           │   │       ├── ObservableValue.java
+│           │   │           │   │       ├── ObservableValueBase.java
+│           │   │           │   │       ├── WeakChangeListener.java
+│           │   │           │   │       ├── WritableBooleanValue.java
+│           │   │           │   │       ├── WritableDoubleValue.java
+│           │   │           │   │       ├── WritableFloatValue.java
+│           │   │           │   │       ├── WritableIntegerValue.java
+│           │   │           │   │       ├── WritableListValue.java
+│           │   │           │   │       ├── WritableLongValue.java
+│           │   │           │   │       ├── WritableMapValue.java
+│           │   │           │   │       ├── WritableNumberValue.java
+│           │   │           │   │       ├── WritableObjectValue.java
+│           │   │           │   │       ├── WritableSetValue.java
+│           │   │           │   │       ├── WritableStringValue.java
+│           │   │           │   │       └── WritableValue.java
+│           │   │           │   ├── binding
+│           │   │           │   │   ├── BidirectionalBinding.java
+│           │   │           │   │   ├── BidirectionalContentBinding.java
+│           │   │           │   │   ├── BindingHelperObserver.java
+│           │   │           │   │   ├── ContentBinding.java
+│           │   │           │   │   ├── DoubleConstant.java
+│           │   │           │   │   ├── ExpressionHelper.java
+│           │   │           │   │   ├── ExpressionHelperBase.java
+│           │   │           │   │   ├── FlatMappedBinding.java
+│           │   │           │   │   ├── FloatConstant.java
+│           │   │           │   │   ├── IntegerConstant.java
+│           │   │           │   │   ├── LazyObjectBinding.java
+│           │   │           │   │   ├── ListExpressionHelper.java
+│           │   │           │   │   ├── LongConstant.java
+│           │   │           │   │   ├── MapExpressionHelper.java
+│           │   │           │   │   ├── MappedBinding.java
+│           │   │           │   │   ├── ObjectConstant.java
+│           │   │           │   │   ├── OrElseBinding.java
+│           │   │           │   │   ├── SelectBinding.java
+│           │   │           │   │   ├── SetExpressionHelper.java
+│           │   │           │   │   ├── StringConstant.java
+│           │   │           │   │   ├── StringFormatter.java
+│           │   │           │   │   └── Subscription.java
+│           │   │           │   ├── collections
+│           │   │           │   │   ├── ArrayChangeListener.java
+│           │   │           │   │   ├── ArrayListenerHelper.java
+│           │   │           │   │   ├── ChangeHelper.java
+│           │   │           │   │   ├── ElementObservableListDecorator.java
+│           │   │           │   │   ├── ElementObserver.java
+│           │   │           │   │   ├── FXCollections.java
+│           │   │           │   │   ├── FloatArraySyncer.java
+│           │   │           │   │   ├── ImmutableObservableList.java
+│           │   │           │   │   ├── IntegerArraySyncer.java
+│           │   │           │   │   ├── ListChangeBuilder.java
+│           │   │           │   │   ├── ListChangeListener.java
+│           │   │           │   │   ├── ListListenerHelper.java
+│           │   │           │   │   ├── MapAdapterChange.java
+│           │   │           │   │   ├── MapChangeListener.java
+│           │   │           │   │   ├── MapListenerHelper.java
+│           │   │           │   │   ├── MappingChange.java
+│           │   │           │   │   ├── ModifiableObservableListBase.java
+│           │   │           │   │   ├── NonIterableChange.java
+│           │   │           │   │   ├── ObservableArray.java
+│           │   │           │   │   ├── ObservableArrayBase.java
+│           │   │           │   │   ├── ObservableFloatArray.java
+│           │   │           │   │   ├── ObservableFloatArrayImpl.java
+│           │   │           │   │   ├── ObservableIntegerArray.java
+│           │   │           │   │   ├── ObservableIntegerArrayImpl.java
+│           │   │           │   │   ├── ObservableList.java
+│           │   │           │   │   ├── ObservableListBase.java
+│           │   │           │   │   ├── ObservableListWrapper.java
+│           │   │           │   │   ├── ObservableMap.java
+│           │   │           │   │   ├── ObservableMapWrapper.java
+│           │   │           │   │   ├── ObservableSequentialListWrapper.java
+│           │   │           │   │   ├── ObservableSet.java
+│           │   │           │   │   ├── ObservableSetWrapper.java
+│           │   │           │   │   ├── SetAdapterChange.java
+│           │   │           │   │   ├── SetChangeListener.java
+│           │   │           │   │   ├── SetListenerHelper.java
+│           │   │           │   │   ├── SortHelper.java
+│           │   │           │   │   ├── SortableList.java
+│           │   │           │   │   ├── SourceAdapterChange.java
+│           │   │           │   │   ├── TrackableObservableList.java
+│           │   │           │   │   ├── UnmodifiableListSet.java
+│           │   │           │   │   ├── UnmodifiableObservableMap.java
+│           │   │           │   │   ├── VetoableListDecorator.java
+│           │   │           │   │   ├── WeakListChangeListener.java
+│           │   │           │   │   ├── WeakMapChangeListener.java
+│           │   │           │   │   ├── WeakSetChangeListener.java
+│           │   │           │   │   └── transformation
+│           │   │           │   │       ├── FilteredList.java
+│           │   │           │   │       ├── SortedList.java
+│           │   │           │   │       └── TransformationList.java
+│           │   │           │   ├── event
+│           │   │           │   │   ├── ActionEvent.java
+│           │   │           │   │   ├── BasicEventDispatcher.java
+│           │   │           │   │   ├── CompositeEventDispatcher.java
+│           │   │           │   │   ├── CompositeEventHandler.java
+│           │   │           │   │   ├── CompositeEventTarget.java
+│           │   │           │   │   ├── CompositeEventTargetImpl.java
+│           │   │           │   │   ├── DirectEvent.java
+│           │   │           │   │   ├── Event.java
+│           │   │           │   │   ├── EventDispatchChain.java
+│           │   │           │   │   ├── EventDispatchChainImpl.java
+│           │   │           │   │   ├── EventDispatchTree.java
+│           │   │           │   │   ├── EventDispatchTreeImpl.java
+│           │   │           │   │   ├── EventDispatcher.java
+│           │   │           │   │   ├── EventHandler.java
+│           │   │           │   │   ├── EventHandlerManager.java
+│           │   │           │   │   ├── EventQueue.java
+│           │   │           │   │   ├── EventRedirector.java
+│           │   │           │   │   ├── EventTarget.java
+│           │   │           │   │   ├── EventType.java
+│           │   │           │   │   ├── EventUtil.java
+│           │   │           │   │   ├── RedirectedEvent.java
+│           │   │           │   │   └── WeakEventHandler.java
+│           │   │           │   ├── property
+│           │   │           │   │   ├── JavaBeanAccessHelper.java
+│           │   │           │   │   ├── MethodHelper.java
+│           │   │           │   │   ├── PropertyReference.java
+│           │   │           │   │   └── adapter
+│           │   │           │   │       ├── Disposer.java
+│           │   │           │   │       ├── JavaBeanPropertyBuilderHelper.java
+│           │   │           │   │       ├── JavaBeanQuickAccessor.java
+│           │   │           │   │       ├── PropertyChangeEvent.java
+│           │   │           │   │       ├── PropertyDescriptor.java
+│           │   │           │   │       ├── PropertyVetoException.java
+│           │   │           │   │       ├── ReadOnlyJavaBeanPropertyBuilderHelper.java
+│           │   │           │   │       ├── ReadOnlyPropertyDescriptor.java
+│           │   │           │   │       └── VetoableChangeListener.java
+│           │   │           │   ├── reflect
+│           │   │           │   │   ├── ConstructorUtil.java
+│           │   │           │   │   ├── FieldUtil.java
+│           │   │           │   │   ├── MethodUtil.java
+│           │   │           │   │   └── ReflectUtil.java
+│           │   │           │   └── util
+│           │   │           │       ├── Builder.java
+│           │   │           │       ├── BuilderFactory.java
+│           │   │           │       ├── Callback.java
+│           │   │           │       ├── Duration.java
+│           │   │           │       ├── FXPermission.java
+│           │   │           │       ├── Pair.java
+│           │   │           │       ├── StringConverter.java
+│           │   │           │       └── converter
+│           │   │           │           ├── BigDecimalStringConverter.java
+│           │   │           │           ├── BigIntegerStringConverter.java
+│           │   │           │           ├── BooleanStringConverter.java
+│           │   │           │           ├── ByteStringConverter.java
+│           │   │           │           ├── CharacterStringConverter.java
+│           │   │           │           ├── CurrencyStringConverter.java
+│           │   │           │           ├── DateStringConverter.java
+│           │   │           │           ├── DateTimeStringConverter.java
+│           │   │           │           ├── DefaultStringConverter.java
+│           │   │           │           ├── DoubleStringConverter.java
+│           │   │           │           ├── FloatStringConverter.java
+│           │   │           │           ├── FormatStringConverter.java
+│           │   │           │           ├── IntegerStringConverter.java
+│           │   │           │           ├── LocalDateStringConverter.java
+│           │   │           │           ├── LocalDateTimeStringConverter.java
+│           │   │           │           ├── LocalTimeStringConverter.java
+│           │   │           │           ├── LongStringConverter.java
+│           │   │           │           ├── NumberStringConverter.java
+│           │   │           │           ├── PercentageStringConverter.java
+│           │   │           │           ├── ShortStringConverter.java
+│           │   │           │           └── TimeStringConverter.java
+│           │   │           ├── game
+│           │   │           │   ├── Argument.java
+│           │   │           │   ├── Arguments.java
+│           │   │           │   ├── Artifact.java
+│           │   │           │   ├── AssetIndex.java
+│           │   │           │   ├── AssetIndexInfo.java
+│           │   │           │   ├── AssetObject.java
+│           │   │           │   ├── ClassicVersion.java
+│           │   │           │   ├── CompatibilityRule.java
+│           │   │           │   ├── CrashReportAnalyzer.java
+│           │   │           │   ├── DefaultGameRepository.java
+│           │   │           │   ├── DownloadInfo.java
+│           │   │           │   ├── DownloadType.java
+│           │   │           │   ├── ExtractRules.java
+│           │   │           │   ├── GameDirectoryType.java
+│           │   │           │   ├── GameException.java
+│           │   │           │   ├── GameJavaVersion.java
+│           │   │           │   ├── GameRepository.java
+│           │   │           │   ├── GameVersion.java
+│           │   │           │   ├── IdDownloadInfo.java
+│           │   │           │   ├── JavaVersion.kt
+│           │   │           │   ├── LaunchOptions.java
+│           │   │           │   ├── LibrariesDownloadInfo.java
+│           │   │           │   ├── Library.java
+│           │   │           │   ├── LibraryDownloadInfo.java
+│           │   │           │   ├── LoggingInfo.java
+│           │   │           │   ├── OSRestriction.java
+│           │   │           │   ├── ReleaseType.java
+│           │   │           │   ├── RuledArgument.java
+│           │   │           │   ├── SimpleVersionProvider.java
+│           │   │           │   ├── StringArgument.java
+│           │   │           │   ├── Version.java
+│           │   │           │   ├── VersionJsonType.java
+│           │   │           │   ├── VersionLibraryBuilder.java
+│           │   │           │   ├── VersionNotFoundException.java
+│           │   │           │   ├── VersionProvider.java
+│           │   │           │   ├── World.java
+│           │   │           │   └── tlauncher
+│           │   │           │       ├── TLauncherLibrary.java
+│           │   │           │       └── TLauncherVersion.java
+│           │   │           ├── launch
+│           │   │           │   ├── DefaultLauncher.java
+│           │   │           │   ├── InjectorMap.java
+│           │   │           │   └── Launcher.java
+│           │   │           ├── mod
+│           │   │           │   ├── Datapack.java
+│           │   │           │   ├── LocalMod.java
+│           │   │           │   ├── LocalModFile.java
+│           │   │           │   ├── MinecraftInstanceTask.java
+│           │   │           │   ├── MismatchedModpackTypeException.java
+│           │   │           │   ├── ModAdviser.java
+│           │   │           │   ├── ModLoaderType.java
+│           │   │           │   ├── ModManager.java
+│           │   │           │   ├── Modpack.java
+│           │   │           │   ├── ModpackCompletionException.java
+│           │   │           │   ├── ModpackConfiguration.java
+│           │   │           │   ├── ModpackExportInfo.java
+│           │   │           │   ├── ModpackInstallTask.java
+│           │   │           │   ├── ModpackManifest.java
+│           │   │           │   ├── ModpackProvider.java
+│           │   │           │   ├── ModpackUpdateTask.java
+│           │   │           │   ├── RemoteMod.java
+│           │   │           │   ├── RemoteModRepository.java
+│           │   │           │   ├── UnsupportedModpackException.java
+│           │   │           │   ├── curse
+│           │   │           │   │   ├── CurseAddon.java
+│           │   │           │   │   ├── CurseCompletionTask.java
+│           │   │           │   │   ├── CurseForgeRemoteModRepository.java
+│           │   │           │   │   ├── CurseInstallTask.java
+│           │   │           │   │   ├── CurseManifest.java
+│           │   │           │   │   ├── CurseManifestFile.java
+│           │   │           │   │   ├── CurseManifestMinecraft.java
+│           │   │           │   │   ├── CurseManifestModLoader.java
+│           │   │           │   │   ├── CurseMetaMod.java
+│           │   │           │   │   └── CurseModpackProvider.java
+│           │   │           │   ├── mcbbs
+│           │   │           │   │   ├── McbbsModpackCompletionTask.java
+│           │   │           │   │   ├── McbbsModpackExportTask.java
+│           │   │           │   │   ├── McbbsModpackLocalInstallTask.java
+│           │   │           │   │   ├── McbbsModpackManifest.java
+│           │   │           │   │   ├── McbbsModpackProvider.java
+│           │   │           │   │   └── McbbsModpackRemoteInstallTask.java
+│           │   │           │   ├── modinfo
+│           │   │           │   │   ├── EmbeddedJarMetadata.kt
+│           │   │           │   │   ├── FabricModMetadata.java
+│           │   │           │   │   ├── ForgeNewModMetadata.java
+│           │   │           │   │   ├── ForgeOldModMetadata.java
+│           │   │           │   │   ├── ForgeOldModMetadataLst.java
+│           │   │           │   │   ├── JarInJarMetadata.kt
+│           │   │           │   │   ├── LiteModMetadata.java
+│           │   │           │   │   ├── PackMcMeta.java
+│           │   │           │   │   └── QuiltModMetadata.java
+│           │   │           │   ├── modrinth
+│           │   │           │   │   ├── ModrinthCompletionTask.java
+│           │   │           │   │   ├── ModrinthInstallTask.java
+│           │   │           │   │   ├── ModrinthManifest.java
+│           │   │           │   │   ├── ModrinthModpackProvider.java
+│           │   │           │   │   └── ModrinthRemoteModRepository.java
+│           │   │           │   ├── multimc
+│           │   │           │   │   ├── MultiMCInstanceConfiguration.java
+│           │   │           │   │   ├── MultiMCInstancePatch.java
+│           │   │           │   │   ├── MultiMCManifest.java
+│           │   │           │   │   ├── MultiMCModpackExportTask.java
+│           │   │           │   │   ├── MultiMCModpackInstallTask.java
+│           │   │           │   │   └── MultiMCModpackProvider.java
+│           │   │           │   └── server
+│           │   │           │       ├── ServerModpackCompletionTask.java
+│           │   │           │       ├── ServerModpackExportTask.java
+│           │   │           │       ├── ServerModpackLocalInstallTask.java
+│           │   │           │       ├── ServerModpackManifest.java
+│           │   │           │       ├── ServerModpackProvider.java
+│           │   │           │       └── ServerModpackRemoteInstallTask.java
+│           │   │           ├── task
+│           │   │           │   ├── AsyncTaskExecutor.java
+│           │   │           │   ├── CompletableFutureTask.java
+│           │   │           │   ├── DownloadException.java
+│           │   │           │   ├── FetchTask.java
+│           │   │           │   ├── FileDownloadTask.java
+│           │   │           │   ├── GetTask.java
+│           │   │           │   ├── Schedulers.java
+│           │   │           │   ├── Task.java
+│           │   │           │   ├── TaskCompletableFuture.java
+│           │   │           │   ├── TaskEvent.java
+│           │   │           │   ├── TaskExecutor.java
+│           │   │           │   └── TaskListener.java
+│           │   │           └── util
+│           │   │               ├── CacheRepository.java
+│           │   │               ├── Constants.java
+│           │   │               ├── DigestUtils.java
+│           │   │               ├── FutureCallback.java
+│           │   │               ├── Hex.java
+│           │   │               ├── Holder.java
+│           │   │               ├── InfiniteSizeList.java
+│           │   │               ├── InvocationDispatcher.java
+│           │   │               ├── KeyUtils.java
+│           │   │               ├── Lang.java
+│           │   │               ├── LibFilter.java
+│           │   │               ├── Logging.java
+│           │   │               ├── MurmurHash2.java
+│           │   │               ├── Pack200Utils.java
+│           │   │               ├── Pair.java
+│           │   │               ├── ReflectionHelper.java
+│           │   │               ├── SimpleMultimap.java
+│           │   │               ├── SocketServer.java
+│           │   │               ├── StringUtils.java
+│           │   │               ├── ToStringBuilder.java
+│           │   │               ├── fakefx
+│           │   │               │   ├── BindingMapping.java
+│           │   │               │   ├── MappedObservableList.java
+│           │   │               │   ├── ObservableCache.java
+│           │   │               │   ├── ObservableHelper.java
+│           │   │               │   ├── ObservableOptionalCache.java
+│           │   │               │   ├── PropertyUtils.java
+│           │   │               │   ├── ReferenceHolder.java
+│           │   │               │   └── SafeStringConverter.java
+│           │   │               ├── function
+│           │   │               │   ├── ExceptionalBiConsumer.java
+│           │   │               │   ├── ExceptionalBiFunction.java
+│           │   │               │   ├── ExceptionalConsumer.java
+│           │   │               │   ├── ExceptionalFunction.java
+│           │   │               │   ├── ExceptionalPredicate.java
+│           │   │               │   ├── ExceptionalRunnable.java
+│           │   │               │   └── ExceptionalSupplier.java
+│           │   │               ├── gson
+│           │   │               │   ├── EnumOrdinalDeserializer.java
+│           │   │               │   ├── FileTypeAdapter.java
+│           │   │               │   ├── GsonSerializerHelper.java
+│           │   │               │   ├── InstantTypeAdapter.java
+│           │   │               │   ├── JsonMap.java
+│           │   │               │   ├── JsonSubtype.java
+│           │   │               │   ├── JsonType.java
+│           │   │               │   ├── JsonTypeAdapterFactory.java
+│           │   │               │   ├── JsonUtils.java
+│           │   │               │   ├── LowerCaseEnumTypeAdapterFactory.java
+│           │   │               │   ├── TolerableValidationException.java
+│           │   │               │   ├── UUIDTypeAdapter.java
+│           │   │               │   ├── Validation.java
+│           │   │               │   ├── ValidationTypeAdapterFactory.java
+│           │   │               │   └── fakefx
+│           │   │               │       ├── FxGson.java
+│           │   │               │       ├── FxGsonBuilder.java
+│           │   │               │       ├── creators
+│           │   │               │       │   ├── ObservableListCreator.java
+│           │   │               │       │   ├── ObservableMapCreator.java
+│           │   │               │       │   └── ObservableSetCreator.java
+│           │   │               │       ├── factories
+│           │   │               │       │   ├── JavaFxPropertyTypeAdapterFactory.java
+│           │   │               │       │   └── TypeHelper.java
+│           │   │               │       └── properties
+│           │   │               │           ├── ListPropertyTypeAdapter.java
+│           │   │               │           ├── MapPropertyTypeAdapter.java
+│           │   │               │           ├── NullPropertyException.java
+│           │   │               │           ├── ObjectPropertyTypeAdapter.java
+│           │   │               │           ├── PropertyTypeAdapter.java
+│           │   │               │           ├── SetPropertyTypeAdapter.java
+│           │   │               │           ├── StringPropertyTypeAdapter.java
+│           │   │               │           └── primitives
+│           │   │               │               ├── BooleanPropertyTypeAdapter.java
+│           │   │               │               ├── DoublePropertyTypeAdapter.java
+│           │   │               │               ├── FloatPropertyTypeAdapter.java
+│           │   │               │               ├── IntegerPropertyTypeAdapter.java
+│           │   │               │               ├── LongPropertyTypeAdapter.java
+│           │   │               │               ├── NullPrimitiveException.java
+│           │   │               │               └── PrimitivePropertyTypeAdapter.java
+│           │   │               ├── io
+│           │   │               │   ├── CSVTable.java
+│           │   │               │   ├── ChecksumMismatchException.java
+│           │   │               │   ├── CompressingUtils.java
+│           │   │               │   ├── FileUtils.java
+│           │   │               │   ├── HttpMultipartRequest.java
+│           │   │               │   ├── HttpRequest.java
+│           │   │               │   ├── HttpServer.java
+│           │   │               │   ├── IOUtils.java
+│           │   │               │   ├── JarUtils.java
+│           │   │               │   ├── NetworkUtils.java
+│           │   │               │   ├── ResponseCodeException.java
+│           │   │               │   ├── Unzipper.java
+│           │   │               │   └── Zipper.java
+│           │   │               ├── platform
+│           │   │               │   ├── CommandBuilder.java
+│           │   │               │   ├── MemoryUtils.java
+│           │   │               │   └── OperatingSystem.java
+│           │   │               ├── png
+│           │   │               │   ├── PNGFilterType.java
+│           │   │               │   ├── PNGMetadata.java
+│           │   │               │   ├── PNGType.java
+│           │   │               │   ├── PNGWriter.java
+│           │   │               │   ├── fakefx
+│           │   │               │   │   └── PNGFakeFXUtils.java
+│           │   │               │   └── image
+│           │   │               │       ├── ArgbImage.java
+│           │   │               │       ├── ArgbImageBuffer.java
+│           │   │               │       ├── ArgbImageWithMetadata.java
+│           │   │               │       └── ArgbImageWrapper.java
+│           │   │               ├── skin
+│           │   │               │   ├── InvalidSkinException.java
+│           │   │               │   └── NormalizedSkin.java
+│           │   │               └── versioning
+│           │   │                   ├── GameVersionNumber.java
+│           │   │                   ├── VersionNumber.java
+│           │   │                   └── VersionRange.java
+│           │   └── org
+│           │       └── jackhuang
+│           │           └── hmcl
+│           │               └── util
+│           │                   └── ServerAddress.java
+│           ├── jniLibs
+│           │   ├── arm64-v8a
+│           │   │   └── libunpack200.so
+│           │   ├── armeabi-v7a
+│           │   │   └── libunpack200.so
+│           │   ├── x86
+│           │   │   └── libunpack200.so
+│           │   └── x86_64
+│           │       └── libunpack200.so
+│           └── res
+│               ├── mipmap
+│               │   └── ic_launcher.webp
+│               └── values
+│                   └── strings.xml
+├── FCLLibrary
+│   ├── .gitignore
+│   ├── build.gradle.kts
+│   └── src
+│       └── main
+│           ├── AndroidManifest.xml
+│           ├── java
+│           │   └── com
+│           │       ├── mio
+│           │       │   └── util
+│           │       │       ├── AndroidUtil.kt
+│           │       │       ├── DialogUtil.kt
+│           │       │       ├── DisplayUtil.kt
+│           │       │       └── ImageUtil.kt
+│           │       └── tungsten
+│           │           └── fcllibrary
+│           │               ├── anim
+│           │               │   ├── DisplayAnimUtils.java
+│           │               │   ├── DynamicIslandAnim.java
+│           │               │   └── ToggleAnimUtils.java
+│           │               ├── browser
+│           │               │   ├── FileBrowser.java
+│           │               │   ├── FileBrowserActivity.java
+│           │               │   ├── FileOperator.java
+│           │               │   ├── adapter
+│           │               │   │   ├── FileBrowserAdapter.java
+│           │               │   │   └── FileBrowserListener.java
+│           │               │   └── options
+│           │               │       ├── LibMode.java
+│           │               │       └── SelectionMode.java
+│           │               ├── component
+│           │               │   ├── FCLActivity.java
+│           │               │   ├── FCLAdapter.java
+│           │               │   ├── FCLCheckBoxTreeAdapter.java
+│           │               │   ├── FCLCheckBoxTreeItem.java
+│           │               │   ├── FCLFragment.java
+│           │               │   ├── FCLService.java
+│           │               │   ├── ResultListener.java
+│           │               │   ├── dialog
+│           │               │   │   ├── EditDialog.kt
+│           │               │   │   ├── FCLAlertDialog.java
+│           │               │   │   ├── FCLColorPickerDialog.java
+│           │               │   │   ├── FCLDialog.kt
+│           │               │   │   └── FullEditDialog.kt
+│           │               │   ├── theme
+│           │               │   │   ├── Theme.java
+│           │               │   │   └── ThemeEngine.java
+│           │               │   ├── ui
+│           │               │   │   ├── FCLBasePage.java
+│           │               │   │   ├── FCLBaseUI.java
+│           │               │   │   ├── FCLCommonPage.java
+│           │               │   │   ├── FCLCommonUI.java
+│           │               │   │   ├── FCLMultiPageUI.java
+│           │               │   │   ├── FCLMultiPageUICallback.java
+│           │               │   │   ├── FCLTempPage.java
+│           │               │   │   ├── FCLUILifecycleCallbacks.java
+│           │               │   │   ├── OnInflateFinishedListener.java
+│           │               │   │   └── UILoadingCallback.java
+│           │               │   └── view
+│           │               │       ├── FCLButton.java
+│           │               │       ├── FCLCheckBox.java
+│           │               │       ├── FCLCheckedTextView.java
+│           │               │       ├── FCLConstraintLayout.kt
+│           │               │       ├── FCLDynamicIsland.java
+│           │               │       ├── FCLEditText.java
+│           │               │       ├── FCLImageButton.java
+│           │               │       ├── FCLImageView.java
+│           │               │       ├── FCLLinearLayout.java
+│           │               │       ├── FCLMenuView.java
+│           │               │       ├── FCLNumberSeekBar.java
+│           │               │       ├── FCLPreciseSeekBar.java
+│           │               │       ├── FCLProgressBar.java
+│           │               │       ├── FCLRadioButton.java
+│           │               │       ├── FCLSeekBar.java
+│           │               │       ├── FCLSpinner.java
+│           │               │       ├── FCLSwitch.java
+│           │               │       ├── FCLTabLayout.java
+│           │               │       ├── FCLTextView.java
+│           │               │       ├── FCLUILayout.java
+│           │               │       ├── FCLView.kt
+│           │               │       ├── HorizontalListView.java
+│           │               │       └── color
+│           │               │           ├── AlphaPatternDrawable.java
+│           │               │           └── ColorPickerView.java
+│           │               ├── crash
+│           │               │   ├── CrashReportActivity.java
+│           │               │   ├── CrashReporter.java
+│           │               │   ├── CrashReporterConfig.java
+│           │               │   └── CrashReporterInitProvider.java
+│           │               ├── skin
+│           │               │   ├── SkinCanvas.java
+│           │               │   ├── SkinModel.java
+│           │               │   ├── SkinRenderer.java
+│           │               │   └── cube
+│           │               │       ├── CapeCube.java
+│           │               │       ├── LimbCube.java
+│           │               │       ├── MainCube.java
+│           │               │       ├── arm
+│           │               │       │   ├── normal
+│           │               │       │   │   ├── LeftArm.java
+│           │               │       │   │   ├── LeftArmOverlay.java
+│           │               │       │   │   ├── RightArm.java
+│           │               │       │   │   └── RightArmOverlay.java
+│           │               │       │   └── slim
+│           │               │       │       ├── LeftArmSlim.java
+│           │               │       │       ├── LeftArmSlimOverlay.java
+│           │               │       │       ├── RightArmSlim.java
+│           │               │       │       └── RightArmSlimOverlay.java
+│           │               │       ├── body
+│           │               │       │   ├── Body.java
+│           │               │       │   └── BodyOverlay.java
+│           │               │       ├── cape
+│           │               │       │   └── Cape.java
+│           │               │       ├── head
+│           │               │       │   ├── Hat.java
+│           │               │       │   └── Head.java
+│           │               │       └── leg
+│           │               │           ├── LeftLeg.java
+│           │               │           ├── LeftLegOverlay.java
+│           │               │           ├── RightLeg.java
+│           │               │           └── RightLegOverlay.java
+│           │               ├── ui
+│           │               │   └── ProgressDialog.java
+│           │               └── util
+│           │                   ├── ConvertUtils.java
+│           │                   ├── LocaleUtils.java
+│           │                   └── LogSharingUtils.kt
+│           └── res
+│               ├── anim
+│               │   ├── page_hide.xml
+│               │   ├── page_show.xml
+│               │   ├── ui_hide.xml
+│               │   └── ui_show.xml
+│               ├── drawable
+│               │   ├── background_dark.jpg
+│               │   ├── background_light.jpg
+│               │   ├── clickable_parent.xml
+│               │   ├── dialog_background.xml
+│               │   ├── fcl_button.xml
+│               │   ├── ic_baseline_add_24.xml
+│               │   ├── ic_baseline_arrow_drop_down_24.xml
+│               │   ├── ic_baseline_arrow_right_24.xml
+│               │   ├── ic_baseline_cloud_upload_24.xml
+│               │   ├── ic_baseline_file_24.xml
+│               │   ├── ic_baseline_folder_24.xml
+│               │   ├── ic_baseline_info_24.xml
+│               │   ├── ic_baseline_remove_24.xml
+│               │   ├── ic_baseline_warning_24.xml
+│               │   └── transparent.xml
+│               ├── layout
+│               │   ├── activity_crash.xml
+│               │   ├── activity_file_browser.xml
+│               │   ├── dialog_alert.xml
+│               │   ├── dialog_color_picker.xml
+│               │   ├── dialog_edit.xml
+│               │   ├── dialog_full_edit.xml
+│               │   ├── item_check_box_tree.xml
+│               │   └── item_file_browser.xml
+│               ├── values
+│               │   ├── attrs.xml
+│               │   ├── colors.xml
+│               │   ├── strings.xml
+│               │   └── styles.xml
+│               ├── values-de
+│               │   └── strings.xml
+│               ├── values-night
+│               │   └── colors.xml
+│               ├── values-ru
+│               │   └── strings.xml
+│               ├── values-uk
+│               │   └── strings.xml
+│               ├── values-zh
+│               │   └── strings.xml
+│               ├── values-zh-rHK
+│               │   └── strings.xml
+│               └── xml
+│                   ├── anim_scale.xml
+│                   └── anim_scale_large.xml
+├── FCLauncher
+│   ├── .gitignore
+│   ├── build.gradle.kts
+│   └── src
+│       └── main
+│           ├── AndroidManifest.xml
+│           ├── java
+│           │   ├── com
+│           │   │   ├── mio
+│           │   │   │   └── data
+│           │   │   │       └── Renderer.kt
+│           │   │   ├── oracle
+│           │   │   │   └── dalvik
+│           │   │   │       └── VMLauncher.java
+│           │   │   └── tungsten
+│           │   │       └── fclauncher
+│           │   │           ├── CriticalNativeTest.java
+│           │   │           ├── FCLConfig.java
+│           │   │           ├── FCLauncher.java
+│           │   │           ├── bridge
+│           │   │           │   ├── FCLBridge.java
+│           │   │           │   ├── FCLBridgeCallback.java
+│           │   │           │   └── OpenFolderCallback.java
+│           │   │           ├── keycodes
+│           │   │           │   ├── AWTInputEvent.java
+│           │   │           │   ├── AndroidKeycodeMap.java
+│           │   │           │   ├── FCLKeycodes.java
+│           │   │           │   ├── GamepadKeycodeMap.java
+│           │   │           │   ├── LwjglGlfwKeycode.java
+│           │   │           │   ├── LwjglKeycodeMap.java
+│           │   │           │   └── MinecraftKeyBindingMapper.java
+│           │   │           ├── plugins
+│           │   │           │   ├── DriverPlugin.kt
+│           │   │           │   ├── FFmpegPlugin.java
+│           │   │           │   ├── NativeLibPlugin.kt
+│           │   │           │   ├── RendererPlugin.kt
+│           │   │           │   └── _Bundle.kt
+│           │   │           └── utils
+│           │   │               ├── Architecture.java
+│           │   │               └── FCLPath.java
+│           │   └── org
+│           │       └── lwjgl
+│           │           └── glfw
+│           │               └── CallbackBridge.java
+│           ├── jni
+│           │   ├── CMakeLists.txt
+│           │   ├── GL
+│           │   │   ├── gl.h
+│           │   │   ├── glext.h
+│           │   │   └── osmesa.h
+│           │   ├── awt
+│           │   │   └── awt_bridge.c
+│           │   ├── awt_headless
+│           │   │   └── placeholder.c
+│           │   ├── awt_xawt
+│           │   │   └── xawt_fake.c
+│           │   ├── bigcoreaffinity.c
+│           │   ├── ctxbridges
+│           │   │   ├── bridge_tbl.h
+│           │   │   ├── common.h
+│           │   │   ├── egl_loader.c
+│           │   │   ├── egl_loader.h
+│           │   │   ├── gl_bridge.c
+│           │   │   ├── gl_bridge.h
+│           │   │   ├── loader_dlopen.c
+│           │   │   ├── loader_dlopen.h
+│           │   │   ├── osm_bridge.c
+│           │   │   ├── osm_bridge.h
+│           │   │   ├── osmesa_loader.c
+│           │   │   ├── osmesa_loader.h
+│           │   │   └── swap_interval_no_egl.c
+│           │   ├── driver_helper
+│           │   │   ├── driver_helper.c
+│           │   │   ├── driver_helper.h
+│           │   │   ├── nsbypass.c
+│           │   │   └── nsbypass.h
+│           │   ├── egl_bridge.c
+│           │   ├── egl_bridge.h
+│           │   ├── environ
+│           │   │   ├── environ.c
+│           │   │   └── environ.h
+│           │   ├── fcl
+│           │   │   ├── fcl_bridge.c
+│           │   │   ├── fcl_event.c
+│           │   │   ├── fcl_loader.c
+│           │   │   └── include
+│           │   │       ├── fcl_bridge.h
+│           │   │       └── fcl_internal.h
+│           │   ├── input_bridge_v3.c
+│           │   ├── jre_launcher.c
+│           │   ├── linkerhook
+│           │   │   ├── linkerhook.cpp
+│           │   │   ├── linkerhook.h
+│           │   │   └── linkerns.c
+│           │   ├── lwjgl_dlopen_hook.c
+│           │   └── virgl
+│           │       ├── virgl.c
+│           │       └── virgl.h
+│           └── jniLibs
+│               ├── arm64-v8a
+│               │   ├── libEGL_angle.so
+│               │   ├── libGLESv2_angle.so
+│               │   ├── libOSMesa_8.so
+│               │   ├── libOSMesa_81.so
+│               │   ├── libVkLayer_khronos_timeline_semaphore.so
+│               │   ├── libdiscord-rpc.so
+│               │   ├── libgl4es_114.so
+│               │   ├── libvgpu.so
+│               │   ├── libvirgl_test_server.so
+│               │   └── libvulkan_freedreno.so
+│               ├── armeabi-v7a
+│               │   ├── libEGL_angle.so
+│               │   ├── libGLESv2_angle.so
+│               │   ├── libOSMesa_8.so
+│               │   ├── libOSMesa_81.so
+│               │   ├── libdiscord-rpc.so
+│               │   ├── libgl4es_114.so
+│               │   ├── libjnidispatch.so
+│               │   ├── libtwitchsdk.so
+│               │   ├── libvgpu.so
+│               │   ├── libvirgl_test_server.so
+│               │   └── libvirglrenderer_1.so
+│               ├── x86
+│               │   ├── libEGL_angle.so
+│               │   ├── libGLESv2_angle.so
+│               │   ├── libdiscord-rpc.so
+│               │   ├── libgl4es_114.so
+│               │   ├── libjnidispatch.so
+│               │   └── libvgpu.so
+│               └── x86_64
+│                   ├── libEGL_angle.so
+│                   ├── libGLESv2_angle.so
+│                   ├── libOSMesa_8.so
+│                   ├── libOSMesa_81.so
+│                   ├── libdiscord-rpc.so
+│                   ├── libgl4es_114.so
+│                   ├── libjnidispatch.so
+│                   ├── libvgpu.so
+│                   ├── libvirgl_test_server.so
+│                   └── libvirglrenderer_1.so
+├── LICENSE
+├── LWJGL-Pojav
+│   ├── build.gradle.kts
+│   ├── compileOnly
+│   │   └── asm-debug-all.jar
+│   ├── libs
+│   │   ├── jsr305.jar
+│   │   ├── lwjgl-freetype.jar
+│   │   ├── lwjgl-glfw.jar
+│   │   ├── lwjgl-jemalloc.jar
+│   │   ├── lwjgl-lwjglx.jar
+│   │   ├── lwjgl-nanovg.jar
+│   │   ├── lwjgl-openal.jar
+│   │   ├── lwjgl-opengl.jar
+│   │   ├── lwjgl-shaderc.jar
+│   │   ├── lwjgl-spvc.jar
+│   │   ├── lwjgl-stb.jar
+│   │   ├── lwjgl-tinyfd.jar
+│   │   ├── lwjgl-vma.jar
+│   │   ├── lwjgl-vulkan.jar
+│   │   └── lwjgl.jar
+│   └── src
+│       └── main
+│           └── java
+│               ├── android
+│               │   └── util
+│               │       ├── ArrayMap.java
+│               │       ├── ContainerHelpers.java
+│               │       ├── EmptyArray.java
+│               │       ├── MapCollections.java
+│               │       └── Objects.java
+│               ├── net
+│               │   ├── java
+│               │   │   └── openjdk
+│               │   │       └── cacio
+│               │   │           └── ctc
+│               │   │               ├── ExternalMouseReader.java
+│               │   │               └── InfdevGrabHandler.java
+│               │   └── minecraft
+│               │       └── client
+│               │           └── ClientBrandRetriever.java.z
+│               └── org
+│                   └── lwjgl
+│                       ├── glfw
+│                       │   ├── CallbackBridge.java
+│                       │   ├── Callbacks.java
+│                       │   ├── FCLInjector.java
+│                       │   ├── FCLInjectorCallback.java
+│                       │   ├── FCLInjectorCallbackI.java
+│                       │   ├── GLFW.java
+│                       │   ├── GLFWNativeCocoa.java
+│                       │   ├── GLFWNativeEGL.java
+│                       │   ├── GLFWNativeNSGL.java
+│                       │   ├── GLFWNativeOSMesa.java
+│                       │   ├── GLFWNativeWGL.java
+│                       │   ├── GLFWNativeWayland.java
+│                       │   ├── GLFWNativeWin32.java
+│                       │   ├── GLFWNativeX11.java
+│                       │   └── GLFWWindowProperties.java
+│                       ├── input
+│                       │   └── InfdevMouse.java
+│                       ├── opengl
+│                       │   └── RendererInit.java
+│                       └── util
+│                           └── mapped
+│                               ├── CacheLinePad.java
+│                               ├── CacheLineSize.java
+│                               ├── CacheUtil.java
+│                               ├── MappedField.java
+│                               ├── MappedForeach.java
+│                               ├── MappedHelper.java
+│                               ├── MappedObject.java
+│                               ├── MappedObjectClassLoader.java
+│                               ├── MappedObjectTransformer.java
+│                               ├── MappedObjectUnsafe.java
+│                               ├── MappedSet.java
+│                               ├── MappedSet2.java
+│                               ├── MappedSet3.java
+│                               ├── MappedSet4.java
+│                               ├── MappedType.java
+│                               └── Pointer.java
+├── NG-GL4ES
+│   ├── NG-GL4ES
+│   └── build.gradle.kts
+├── README.md
+├── README_EN.md
+├── README_RU.md
+├── Terracotta
+│   ├── .gitignore
+│   ├── build.gradle.kts
+│   └── src
+│       └── main
+│           ├── AndroidManifest.xml
+│           ├── java
+│           │   └── net
+│           │       └── burningtnt
+│           │           └── terracotta
+│           │               └── TerracottaAndroidAPI.java
+│           └── jniLibs
+│               ├── arm64-v8a
+│               │   └── libterracotta.so
+│               ├── armeabi-v7a
+│               │   └── libterracotta.so
+│               ├── x86
+│               │   └── libterracotta.so
+│               └── x86_64
+│                   └── libterracotta.so
+├── ZipFileSystem
+│   ├── build.gradle.kts
+│   └── src
+│       └── main
+│           ├── java
+│           │   └── com
+│           │       └── sun
+│           │           └── nio
+│           │               └── zipfs
+│           │                   ├── JarFileSystemProvider.java
+│           │                   ├── ZipCoder.java
+│           │                   ├── ZipConstants.java
+│           │                   ├── ZipDirectoryStream.java
+│           │                   ├── ZipFileAttributeView.java
+│           │                   ├── ZipFileAttributes.java
+│           │                   ├── ZipFileStore.java
+│           │                   ├── ZipFileSystem.java
+│           │                   ├── ZipFileSystemProvider.java
+│           │                   ├── ZipInfo.java
+│           │                   ├── ZipPath.java
+│           │                   └── ZipUtils.java
+│           └── resources
+│               ├── LICENSE
+│               └── META-INF
+│                   └── services
+│                       └── java.nio.file.spi.FileSystemProvider
+├── build.gradle.kts
+├── debug-key.jks
+├── gradle
+│   ├── libs.versions.toml
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── key-store.jks
+├── private_key.pepk
+├── settings.gradle.kts
+├── version_map.json
+└── 目录树.txt
+
+294 directories, 1567 files
