@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.tungsten.fclcore"
+    namespace = "com.tungsten.fcllibrary"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -23,37 +23,33 @@ android {
         }
         create("fordebug") {
             initWith(getByName("debug"))
+            resValue("string", "file_browser_provider", "com.tungsten.fcl.debug.provider")
         }
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlin {
         compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_1_8)
+            jvmTarget.set(JvmTarget.JVM_17)
         }
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
 dependencies {
     implementation(project(":FCLauncher"))
-    implementation(project(":ZipFileSystem"))
-    implementation(libs.nanohttpd)
-    implementation(libs.opennbt)
-    implementation(libs.xz)
+    implementation(project(":FCLCore"))
     implementation(libs.commons.io)
-    implementation(libs.commons.lang3)
-    implementation(libs.commons.compress)
-    implementation(libs.toml4j)
-    implementation(libs.constant.pool.scanner)
-    implementation(libs.gson)
     implementation(libs.appcompat)
     implementation(libs.material)
-    implementation(libs.jsoup)
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
-    implementation("androidx.multidex:multidex:2.0.1")
+    implementation(libs.async.layout.inflater)
+    implementation(libs.jelf)
+    implementation(libs.glide)
 }
