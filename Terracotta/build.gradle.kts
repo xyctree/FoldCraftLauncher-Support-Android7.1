@@ -31,10 +31,10 @@ android {
     }
     
     kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_1_8)
-    	}
-	}
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_1_8)
+        }
+    }
 }
 
 dependencies {
