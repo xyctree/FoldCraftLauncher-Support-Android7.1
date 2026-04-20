@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    kotlin("android")
 }
 
 android {
@@ -36,7 +37,7 @@ android {
     
     kotlin {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
-    }
-}
+        jvmTarget.set(JvmTarget.JVM_1_8)
+    	}
+	}
 }
