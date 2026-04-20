@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.library)
-    kotlin("android")
 }
 
 android {
@@ -28,12 +27,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
         isCoreLibraryDesugaringEnabled = true
-    }
-    
-    kotlin {
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_1_8)
-        }
     }
 }
 
